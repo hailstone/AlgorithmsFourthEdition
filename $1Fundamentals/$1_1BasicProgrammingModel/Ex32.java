@@ -49,10 +49,10 @@ public class Ex32 {
             double halfWidth = 1.0 / N / 2;
             double halfHeight = y * 2;
 
-            System.out.println(x + " " + y + " " + halfWidth + " " + halfHeight);
+//            System.out.println(x + " " + y + " " + halfWidth + " " + halfHeight);
 
             StdDraw.rectangle(x, y, halfWidth, halfHeight);
-            Thread.sleep(500);
+//            Thread.sleep(500);
         }
     }
 }
