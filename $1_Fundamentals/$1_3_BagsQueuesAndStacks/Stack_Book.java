@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Created by hailstone01 on 1/11/16.
  */
-public class Stack<T> {
+public class Stack_Book<T> {
     private Node first;
     private int N;
 
@@ -50,7 +50,7 @@ public class Stack<T> {
 
 class StackTestDrive {
     public static void main(String[] args) throws Exception {
-        Stack<String> s = new Stack<String>();
+        Stack_Book<String> s = new Stack_Book<String>();
         Scanner scanner = new Scanner(System.in);
 
         s.push("aa");

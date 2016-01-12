@@ -3,7 +3,7 @@ package $1_Fundamentals.$1_3_BagsQueuesAndStacks;
 /**
  * Created by hailstone01 on 1/11/16.
  */
-public class Queue<T> {
+public class Queue_Book<T> {
     Node first = null;
     Node last = null;
     int N = 0;
@@ -58,7 +58,7 @@ public class Queue<T> {
 
 class QueueTestDrive {
     public static void main(String[] args) throws Exception {
-        Queue<String> queue = new Queue<String>();
+        Queue_Book<String> queue = new Queue_Book<String>();
 
         queue.enqueue("aa");
         queue.enqueue("bb");
