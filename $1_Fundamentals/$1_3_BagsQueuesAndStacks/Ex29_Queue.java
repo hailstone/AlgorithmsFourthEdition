@@ -16,10 +16,10 @@ public class Ex29_Queue<T> {
             return;
         } else {
             while (current != null && current != last) {
-                System.out.println(current.item);
+                System.out.println(current.getItem());
                 current = current.next;
             }
-            System.out.println(current.item);
+            System.out.println(current.getItem());
         }
     }
 

@@ -41,7 +41,7 @@ public class MyLinkedList<T> {
     public boolean find(T key) {
         Node<T> current = first;
         while (current != null) {
-            if (current.item.equals(key)) {
+            if (current.getItem().equals(key)) {
                 return true;
             }
             current = current.next;
@@ -77,13 +77,13 @@ public class MyLinkedList<T> {
             return;
         }
 
-        while (first != null && first.item.equals(key)) {
+        while (first != null && first.getItem().equals(key)) {
             first = first.next;
         }
 
         Node<String> current = (Node<String>) first;
         while (current != null && current.next != null) {
-            if (current.next.item.equals(key)) {
+            if (current.next.getItem().equals(key)) {
                 current.next = current.next.next;
             } else {
                 current = current.next;
@@ -99,7 +99,7 @@ public class MyLinkedList<T> {
         T last;
 
         if (first.next == null) {
-            last = first.item;
+            last = first.getItem();
             first = null;
         } else {
             Node<T> current = first;
@@ -107,7 +107,7 @@ public class MyLinkedList<T> {
                 current = current.next;
             }
 
-            last = (T) current.next.item;
+            last = (T) current.next.getItem();
             current.next = null;
         }
         return last;
@@ -130,7 +130,7 @@ public class MyLinkedList<T> {
     public void traverse() {
         Node<T> current = first;
         while (current != null) {
-            System.out.print(current.item + "\t");
+            System.out.print(current.getItem() + "\t");
             current = current.next;
         }
         System.out.println();

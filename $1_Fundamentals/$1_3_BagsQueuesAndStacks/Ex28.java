@@ -10,10 +10,10 @@ public class Ex28 {
         }
 
         if (first.next == null) {
-            return first.item;
+            return first.getItem();
         }
 
-        return first.item > max(first.next) ? first.item : max(first.next);
+        return first.getItem() > max(first.next) ? first.getItem() : max(first.next);
     }
 
     public static void main(String[] args) throws Exception {

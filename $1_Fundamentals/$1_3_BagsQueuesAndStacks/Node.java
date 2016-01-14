@@ -4,7 +4,7 @@ package $1_Fundamentals.$1_3_BagsQueuesAndStacks;
  * Created by hailstone01 on 1/13/16.
  */
 public class Node<T> {
-    T item;
+    private T item;
     Node next;
 
     public Node() {
@@ -20,4 +20,7 @@ public class Node<T> {
         return "item is: " + item;
     }
 
+    public T getItem() {
+        return item;
+    }
 }

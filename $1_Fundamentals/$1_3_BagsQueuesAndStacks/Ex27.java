@@ -11,7 +11,7 @@ public class Ex27 {
 
         int max = Integer.MIN_VALUE;
         while (first != null) {
-            max = max > first.item ? max : first.item;
+            max = max > first.getItem() ? max : first.getItem();
             first = first.next;
         }
 
