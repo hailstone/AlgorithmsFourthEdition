@@ -1,15 +1,25 @@
-package $1_Fundamentals;
+package $1_fundamentals;
 
-import edu.princeton.cs.algs4.StdAudio;
+import edu.princeton.cs.algs4.StdOut;
 
 /**
  * Created by hailstone01 on 1/5/16.
  */
 public class Test {
-    public static void main(String[] args) {
-        System.out.println("test");
-        System.out.println(1.0/0.0);
-        StdAudio.play(444.0);
+    public static void cmp(Integer first, Integer second) {
+        if (first < second)
+            StdOut.printf("%d < %d\n", first, second);
+        else if (first == second)
+            StdOut.printf("%d == %d\n", first, second);
+        else if (first > second)
+            StdOut.printf("%d > %d\n", first, second);
+        else
+            StdOut.printf("%d and %d are incomparable\n", first, second);
+    }
 
+    public static void main(String[] args) {
+        String s = null;
+        System.out.println(s);
     }
 }
+
