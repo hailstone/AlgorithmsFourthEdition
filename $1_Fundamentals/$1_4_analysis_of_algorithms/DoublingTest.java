@@ -1,5 +1,6 @@
 package $1_fundamentals.$1_4_analysis_of_algorithms;
 
+import edu.princeton.cs.algs4.StdDraw;
 import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.Stopwatch;
 
@@ -19,9 +20,13 @@ public class DoublingTest {
     }
 
     public static void main(String[] args) {
+        StdDraw.setXscale(0, 10000);
+        StdDraw.setYscale(0, 30);
+        StdDraw.setPenRadius(0.05);
         for (int N = 250; true; N += N) {
             double time = timeTrial(N);
             System.out.printf("%7d %5.3f\n", N, time);
+            StdDraw.point(N, time);
         }
     }
 }
