@@ -7,11 +7,11 @@ import java.util.Scanner;
 /**
  * Created by hailstone01 on 1/19/16.
  */
-public class UF {
+public class QuickFindUF {
     private int[] id;
     private int count;
 
-    public UF(int N) {
+    public QuickFindUF(int N) {
         count = N;
         id = new int[N];
         for (int i = 0; i < N; i++) {
@@ -49,15 +49,15 @@ public class UF {
     public static void main(String[] args) throws FileNotFoundException {
         Scanner scanner = new Scanner(new File("algs4-data/mediumUF.txt"));
         int N = scanner.nextInt();
-        UF uf = new UF(N);
+        QuickFindUF quickFindUf = new QuickFindUF(N);
         while (scanner.hasNext()) {
             int p = scanner.nextInt();
             int q = scanner.nextInt();
-            if (uf.connected(p, q)) {
+            if (quickFindUf.connected(p, q)) {
                 System.out.println(p + " and " + q + " already connected");
                 continue;
             }
-            uf.union(p, q);
+            quickFindUf.union(p, q);
 //            System.out.println(p + " " + q);
         }
     }

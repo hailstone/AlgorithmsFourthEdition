@@ -7,12 +7,12 @@ import java.util.Scanner;
 /**
  * Created by hailstone01 on 1/20/16.
  */
-public class UF2 {
+public class QuickUnionUF {
     private int[] id;
     private int count;
     private int[] size;
 
-    public UF2(int N) {
+    public QuickUnionUF(int N) {
         count = N;
         id = new int[N];
         size = new int[N];
@@ -65,11 +65,11 @@ public class UF2 {
     public static void main(String[] args) throws FileNotFoundException {
         Scanner scanner = new Scanner(new File("algs4-data/largeUF.txt"));
         int N = scanner.nextInt();
-        UF2 uf2 = new UF2(N);
+        QuickUnionUF quickUnionUf = new QuickUnionUF(N);
         while (scanner.hasNext()) {
-            uf2.union(scanner.nextInt(), scanner.nextInt());
+            quickUnionUf.union(scanner.nextInt(), scanner.nextInt());
         }
 
-        System.out.println(uf2.getCount());
+        System.out.println(quickUnionUf.getCount());
     }
 }
