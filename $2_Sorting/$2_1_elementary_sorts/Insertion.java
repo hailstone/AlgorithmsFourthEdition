@@ -15,7 +15,7 @@ public class Insertion {
     public static void sort(Comparable[] a) {
         int N = a.length;
         for (int i = 0; i < N; i++) {
-            for (int j = i + 1; j > 0 && less(a[j], a[j - 1]); j--) {
+            for (int j = i; j > 0 && less(a[j], a[j - 1]); j--) {
                 exch(a, j, j - 1);
             }
             assert isSorted(a, 0, i);
@@ -25,7 +25,7 @@ public class Insertion {
 
     public static void sort(Comparable[] a, int lo, int hi) {
         for (int i = lo; i <= hi; i++) {
-            for (int j = lo + 1; j > 0 && less(a[j], a[j - 1]); j--) {
+            for (int j = i; j > 0 && less(a[j], a[j - 1]); j--) {
                 exch(a, j, j - 1);
             }
         }
@@ -35,7 +35,7 @@ public class Insertion {
     public static void sort(Object[] a, Comparator comparator) {
         int N = a.length;
         for (int i = 0; i < N; i++) {
-            for (int j = i + 1; j > 0 && less(a[j], a[j - 1], comparator); j--) {
+            for (int j = i; j > 0 && less(a[j], a[j - 1], comparator); j--) {
                 exch(a, j, j - 1);
             }
             assert isSorted(a, 0, i, comparator);
@@ -45,7 +45,7 @@ public class Insertion {
 
     public static void sort(Object[] a, int lo, int hi, Comparator comparator) {
         for (int i = lo; i <= hi; i++) {
-            for (int j = lo + 1; j > lo && less(a[j], a[j - 1], comparator); j--) {
+            for (int j = lo; j > lo && less(a[j], a[j - 1], comparator); j--) {
                 exch(a, j, j - 1);
             }
         }

@@ -4,7 +4,7 @@ package $2_Sorting.$2_1_elementary_sorts;
  * Created by hailstone01 on 1/20/16.
  */
 public class Bubble {
-    public static void sort(double[] arr) {
+    public static void sort(Double[] arr) {
         for (int i = arr.length - 1; i > 0; i--) {
             for (int j = 0; j < i; j++) {
                 if (arr[j] > arr[j + 1]) {
@@ -24,8 +24,6 @@ public class Bubble {
     }
 
     public static void main(String[] args) {
-        double[] arr = {5, 3, 7, 9, 3, 1, 6, 3, 8, 2};
-        sort(arr);
-        print(arr);
+
     }
 }
