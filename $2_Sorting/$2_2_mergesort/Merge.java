@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 /**
  * Created by hailstone01 on 1/25/16.
+ * merge sort: top down
  */
 public class Merge {
     private Merge() {}
