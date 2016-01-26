@@ -9,13 +9,14 @@ import java.util.Scanner;
  * merge sort: top down
  */
 public class Merge {
-    private Merge() {}
+    private Merge() {
+    }
 
     private static void merge(Comparable[] a, Comparable[] aux, int lo, int mid, int hi) {
         assert isSorted(a, lo, mid);
         assert isSorted(a, mid + 1, hi);
 
-        for (int k = lo; k <=hi; k++) {
+        for (int k = lo; k <= hi; k++) {
             aux[k] = a[k];
         }
 
