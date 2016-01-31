@@ -44,6 +44,5 @@ public class FindMaxDup {
         show(arr);
         System.out.println(find(arr));
         show(arr);
-
     }
 }
