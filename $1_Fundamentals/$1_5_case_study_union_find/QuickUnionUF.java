@@ -8,28 +8,25 @@ import java.util.Scanner;
  * Created by hailstone01 on 1/20/16.
  */
 public class QuickUnionUF {
-    private int[] id;
+    private int[] parent;
     private int count;
     private int[] size;
 
     public QuickUnionUF(int N) {
         count = N;
-        id = new int[N];
+        parent = new int[N];
         size = new int[N];
         for (int i = 0; i < N; i++) {
-            id[i] = i;
+            parent[i] = i;
             size[i] = 1;
         }
     }
 
     public int find(int p) {
-        while (true) {
-            if (id[p] == p) {
-                return p;
-            } else {
-                return find(id[p]);
-            }
+        while (p != parent[p]) {
+            p = parent[p];
         }
+        return p;
     }
 
     public void union(int p, int q) {
@@ -44,10 +41,10 @@ public class QuickUnionUF {
         int qSize = size[qRoot];
 
         if (pSize < qSize) {
-            id[pRoot] = qRoot;
+            parent[pRoot] = qRoot;
             size[qRoot] = pSize + qSize;
         } else {
-            id[qRoot] = pRoot;
+            parent[qRoot] = pRoot;
             size[pRoot] = pSize + qSize;
         }
 
